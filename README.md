@@ -1,4 +1,4 @@
-#Setting Up Virtual Environment & Installing Dependencies (Linux)
+Setting Up Virtual Environment & Installing Dependencies & Running Server locally (Linux)
 
 ## Prerequisites
 Ensure Python is installed. Check with:
