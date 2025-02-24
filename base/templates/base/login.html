@@ -1,0 +1,30 @@
+
+{% extends 'base/base.html' %}
+
+
+
+ 
+{% block header %}  
+
+<h1>Login</h1>
+
+{% endblock header %}
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form-group">
+        {{ field.name }}
+        {{ field }}
+    </div>
+    <br>
+    {% endfor %}
+    <button type="submit" class = "button">Log in</button>
+  </form>
+
+  <p>Don't have an account? <a href="{% url 'register'%}" style="color: #EB796f;">Register</a></p>
+
+  {% endblock body %}
+

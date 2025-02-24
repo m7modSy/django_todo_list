@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+ 
+{% block header %}  
+
+<h1>Delete</h1>
+
+{% endblock header %}
+
+{% block body %}
+
+<h2><a href="{% url 'tasks' %}"> Back </a></h2>
+<form method="POST">
+    {%csrf_token%}
+    <p>Are you Sure you want to delete {{task.title}}</p>
+
+    <button type="submit" class = "button">Delete</button>
+</form>
+
+  {% endblock body %}
+  

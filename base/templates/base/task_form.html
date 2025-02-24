@@ -1,0 +1,25 @@
+ {% extends 'base/base.html' %}
+
+  
+ {% block header %}  
+
+  <h1>Add new Task</h1>
+  {% endblock header %}
+  {% block body %}  
+  <h2><a href="{% url 'tasks' %}"> Back </a></h2>
+  <form method="post">
+      {% csrf_token %}
+        {% for field in form %}
+          <div class="form-group">
+              {{ field.name }}
+              <br>
+              {{ field }}
+          </div>
+          <br>
+       {% endfor %}
+      <button type="submit" class = "button">Create</button>
+    </form>
+  
+  
+  
+    {% endblock body %}
